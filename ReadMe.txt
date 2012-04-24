@@ -43,15 +43,23 @@ See wmClipboard.cpp for an example of how to handle these parameters
 	a JSON object with any parameters defined on it. See the clipboardSuccess and clipboardError methods
 	in the wmClipboard.cpp file
 
-5) In your initialiser you need to set the name of the module in the parent constructor	and register any functions that will be called from Javascript with RegisterMember. See the initiliser method for the CClipboard class in the wmClipboard.cpp file
+5) In your initialiser you need to set the name of the module in the parent constructor	and register any functions 
+that will be called from Javascript with RegisterMember. See the initiliser method for the CClipboard class in the 
+wmClipboard.cpp file
 
-6) Create a Javascript file which creates an object that is the Javascript interface to the module, this has a proxy object derived from wm.Bridge.ProxyBase that handles the callbacks. You can look at the clipboard.js file in the wmClipboard example under data/webassets
+6) Create a Javascript file which creates an object that is the Javascript interface to the module, this has a proxy 
+object derived from wm.Bridge.ProxyBase that handles the callbacks. You can look at the clipboard.js file in the 
+wmClipboard example under data/webassets
 
-7) Create the functions to be called on this object, these do error checking and call wm.bridge.exec to call through to the C++. See the clipboard.js file in the wsClipboard project under data/webassets for examples
+7) Create the functions to be called on this object, these do error checking and call wm.bridge.exec to call through
+to the C++. See the clipboard.js file in the wsClipboard project under data/webassets for examples
 
-8) On the proxy add the callback proxies to extract the parameters and call the users callback with these parameters for more information, take a look at the source in the wmClipboard example clipboard.js in data/webassets, the proxies are at the bottom of this file
+8) On the proxy add the callback proxies to extract the parameters and call the users callback with these parameters
+for more information, take a look at the source in the wmClipboard example clipboard.js in data/webassets, the proxies 
+are at the bottom of this file
 
-9) In wmApplication.cpp, in Init after the dispatcher has been created, but before SetNativeReady has been called, create your module and pass the dispatcher to it. See the example of this in the source file
+9) In wmApplication.cpp, in Init after the dispatcher has been created, but before SetNativeReady has been called, 
+create your module and pass the dispatcher to it. See the example of this in the source file
 
 10) In the Terminate() method in wmApplication.cpp, call the Shutdown() method on the new module then delete it
 
@@ -59,4 +67,5 @@ See wmClipboard.cpp for an example of how to handle these parameters
 
 Final note
 It is possible to remove the iwaudiocapture and iwui_style assets from wmApplication to reduce the overall size of the
-binaries. You can simply comment or remove these from the assets section of the mkb project file. Note that this means your application cannot use the Capture.captureAudio call.
+binaries. You can simply comment or remove these from the assets section of the mkb project file. Note that this means 
+your application cannot use the Capture.captureAudio call.
