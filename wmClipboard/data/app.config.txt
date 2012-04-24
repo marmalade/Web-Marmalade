@@ -1,0 +1,15 @@
+# This .config.txt file documents configuration settings for your
+# application
+# The syntax is similar to that in .icf files:
+#
+# [GroupName]
+# Setting     Documentation for setting
+#
+# e.g.
+# [MyApplicationGroup]
+# MySetting   Description of what MySetting is for, its default values, etc
+
+[Web]
+WebStartURL			<String>	Startup url.  If it contains not scheme, e.g. "http://", then the file will assumed to be local.
+WebRootDirectory    <String>    Location of web assets relative to app root directory.
+

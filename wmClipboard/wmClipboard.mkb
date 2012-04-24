@@ -1,0 +1,24 @@
+#!/usr/bin/env mkb
+
+subprojects
+{
+    wmClipboard
+}
+
+assets
+{
+    (data)
+    webassets
+    iwaudiocapture
+}
+
+if {{ defined I3D_OS_WINDOWS or defined I3D_OS_OSX }}
+{
+    assets
+    {
+        (data)
+        #Fonts only needed when defaulting to IwUI in IwAudioCapture (which uses IwNUI)
+        #This helps reduce the package size on iOS and Android
+        iwui_style
+    }
+}

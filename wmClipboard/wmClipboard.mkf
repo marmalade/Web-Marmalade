@@ -1,0 +1,30 @@
+#!/usr/bin/env mkb
+
+files
+{
+    wmApplication.cpp
+    CreateFallbackPage.cpp
+    FallbackPage.h
+
+    wmClipboard.h
+    wmClipboard.cpp
+
+    [docs]
+    (docs)
+    wmApplication.defines.txt
+}
+
+options
+{
+    output-name = "$MARMALADE_ROOT/web/wmApplication/target/wmApplication"
+    output-name-debug = "$MARMALADE_ROOT/web/wmApplication/target/wmApplication_d"
+}
+
+
+subprojects
+{
+    s3eWebView
+    iwgx
+    ../wmApplication/extensions/s3eOverlay
+    ../wmModules
+}

@@ -1,0 +1,95 @@
+#!/usr/bin/env mkb
+display_name "'Web Marmalade'/wmModules"
+
+defines IW_HTTP_SSL
+
+packages
+{
+    tiniconv
+}
+
+subprojects
+{
+    iwhttp
+    iwwebbridge
+    tiniconv
+    s3eDialog
+    iwutil
+    iwaudiocapture
+    s3eAudioCapture
+}
+
+files
+{
+    [h]
+    (h)
+    wmModules.h
+    wmModuleEncoding.h
+    ding.h
+
+    # api modules
+    Accelerometer.h
+    Camera.h
+    Capture.h
+    ChildBrowser.h
+    Compass.h
+    Connection.h
+    Events.h
+    File.h
+    FileHelper.h
+    Geolocation.h
+    Media.h
+    Notification.h
+
+    [source]
+    (source)
+    wmModules.cpp
+
+    # api modules
+    Accelerometer.cpp
+    Camera.cpp
+    Capture.cpp
+    ChildBrowser.cpp
+    Compass.cpp
+    Connection.cpp
+    Events.cpp
+    File.cpp
+    FileHelper.cpp
+    Geolocation.cpp
+    Media.cpp
+    Notification.cpp
+
+    [source/auto]
+    (source/auto)
+    AccelerometerBase.cpp
+    CameraBase.cpp
+    CaptureBase.cpp
+    ChildbrowserBase.cpp
+    CompassBase.cpp
+    ConnectionBase.cpp
+    EventsBase.cpp
+    FileBase.cpp
+    GeolocationBase.cpp
+    MediaBase.cpp
+    NotificationBase.cpp
+
+    [h/auto]
+    (h/auto)
+    AccelerometerBase.h
+    CameraBase.h
+    CaptureBase.h
+    ChildbrowserBase.h
+    CompassBase.h
+    ConnectionBase.h
+    EventsBase.h
+    FileBase.h
+    GeolocationBase.h
+    MediaBase.h
+    NotificationBase.h
+}
+
+includepaths
+{
+    h
+    h/auto
+}

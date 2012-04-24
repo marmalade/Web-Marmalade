@@ -1,0 +1,431 @@
+CIwUIPropertySet 
+{
+    name "<font_heading>"
+//: extraclass "CIwUILabel"
+    sizeToContent false
+    font "font_small"
+    textColour { 45 45 45 255 }
+    alignH "centre"
+    alignV "middle"
+    margin  { 0 0 }
+//: extraclass "CIwUIDrawableText"
+}
+CIwUIPropertySet 
+{
+    name "<focus>"
+//: extraclass "IIwUIDrawable"
+    drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+    name "<focus_checkbox>"
+    parent <focus>
+//: extraclass "IIwUIDrawable"
+    drawableType "image"
+}
+CIwUIPropertySet 
+{
+	name "<focus_left>"
+	parent <focus>
+//: extraclass "IIwUIDrawable"
+	drawableType "image"
+}
+CIwUIPropertySet 
+{
+	name "<focus_right>"
+	parent <focus>
+//: extraclass "IIwUIDrawable"
+	drawableType "image"
+}
+CIwUIPropertySet 
+{
+	name "<focus_centre>"
+	parent <focus>
+//: extraclass "IIwUIDrawable"
+	drawableType "image"
+}
+CIwUIPropertySet 
+{
+	name "<focus_textField>"
+	parent <focus>
+//: extraclass "IIwUIDrawable"
+	drawableType "image"
+}
+CIwUIPropertySet 
+{
+	name "<button_up>"
+//: extraclass "IIwUIDrawable"
+    drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+    name "<button_down>"
+//: extraclass "IIwUIDrawable"
+    drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+    name "<button_disabled>"
+//: extraclass "IIwUIDrawable"
+    drawableType "image"
+    texture "focus"
+    imageColour { 128 128 128 }
+}
+CIwUIPropertySet 
+{
+    name "<checkbox_style>"
+//: extraclass "IIwUIDrawable"
+    drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+    name "<checkbox_cross>"
+//: extraclass "IIwUIDrawable"
+    drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+    name "<button>"
+    parent <font_heading>
+//: extraclass "CIwUIButton"
+    buttonUp <button_up>
+    buttonDown <button_down>
+    buttonDisabled <button_disabled>
+    focus <focus>
+}
+CIwUIPropertySet 
+{
+    name "<label_medium>"
+    parent <font_heading>
+//: extraclass "CIwUILabel"
+    sizeToContent true
+    alignH "left"
+    alignV "middle"
+    margin  { 6 6 }
+}
+CIwUIPropertySet 
+{
+    name "<checkbox>"
+    parent <font_heading>
+//: extraclass "CIwUICheckbox"
+    caption ""
+    alignH "left"
+    alignV "middle"
+    margin  { 8 0 }
+    boxSize  { 24 24 }
+    boxStyle <checkbox_style>
+    crossStyle <checkbox_cross>
+    focus <focus_checkbox>
+}
+CIwUIPropertySet 
+{
+    name "<scrollable>"
+//: extraclass "CIwUIScrollableView"
+    verticalScrollBar <button_up>
+    horizontalScrollBar <button_up>
+    scrollBarSize { 20 20 }
+}
+CIwUIPropertySet 
+{
+    name "<progressBar_base>"
+//: extraclass "IIwUIDrawable"
+    drawableType "image"
+    uv0  { 3 3 }
+    uv1  { 29 24 }
+}
+CIwUIPropertySet 
+{
+    name "<progressBar_background>"
+    parent <progressBar_base>
+//: extraclass "IIwUIDrawable"
+    drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+    name "<progressBar>"
+    parent <progressBar_base>
+//: extraclass "CIwUIProgressBar"
+    sizeToContent true
+    texture "focus"
+    background <progressBar_background>
+}
+CIwUIPropertySet
+{
+    name "<focus_slider>"
+    parent <focus>
+//: extraclass "IIwUIDrawable"
+    drawableType "image"
+    uv0  { 0 0 }
+    uv1  { 30 30 }
+}
+CIwUIPropertySet
+{
+    name "<slider_marker>"
+//: extraclass "IIwUIDrawable"
+    drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet
+{
+    name "<slider_bar>"
+//: extraclass "IIwUIDrawable"
+    drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet
+{
+    name "<slider_background>"
+//: extraclass "IIwUIDrawable"
+    drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet
+{
+    name "<slider>"
+//: extraclass "CIwUISlider"
+    sizeToContent true
+    background <slider_background>
+    marker <slider_marker>
+    bar <slider_bar>
+    focus <focus_slider>
+    markerSize  { 25 32 }
+    sliderMin 0
+    sliderMax 1024
+}
+
+CIwUIPropertySet 
+{
+	name "<radio_base>"
+//: extraclass "IIwUIDrawable"
+	drawableType "image"
+}
+CIwUIPropertySet 
+{
+	name "<radio_buttonDown>"
+	parent <radio_base>
+//: extraclass "IIwUIDrawable"
+	drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+	name "<radio_left_buttonDown>"
+	parent <radio_base>
+//: extraclass "IIwUIDrawable"
+	drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+	name "<radio_right_buttonDown>"
+	parent <radio_base>
+//: extraclass "IIwUIDrawable"
+	drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+	name "<radio_buttonUp>"
+	parent <radio_base>
+//: extraclass "IIwUIDrawable"
+	drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+	name "<radio_left_buttonUp>"
+	parent <radio_base>
+//: extraclass "IIwUIDrawable"
+	drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+	name "<radio_right_buttonUp>"
+	parent <radio_base>
+//: extraclass "IIwUIDrawable"
+	drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+	name "<radio>"
+	parent <font_heading>
+//: extraclass "CIwUIRadioButton"
+	sizeMin  { 16 32 }
+	focus <focus>
+}
+CIwUIPropertySet 
+{
+	name "<radio_left>"
+	parent <radio>
+//: extraclass "CIwUIRadioButton"
+	buttonUp <radio_left_buttonUp>
+	buttonDown <radio_left_buttonDown>
+	focus <focus_left>
+}
+CIwUIPropertySet 
+{
+	name "<radio_centre>"
+	parent <radio>
+//: extraclass "CIwUIRadioButton"
+	buttonUp <radio_buttonUp>
+	buttonDown <radio_buttonDown>
+	focus <focus_centre>
+}
+CIwUIPropertySet 
+{
+	name "<radio_right>"
+	parent <radio>
+//: extraclass "CIwUIRadioButton"
+	buttonUp <radio_right_buttonUp>
+	buttonDown <radio_right_buttonDown>
+	focus <focus_right>
+}
+CIwUIPropertySet 
+{
+	name "<textField_cursor>"
+//: extraclass "IIwUIDrawable"
+	drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+	name "<textField_background>"
+//: extraclass "IIwUIDrawable"
+	drawableType "image"
+    texture "focus"
+}
+CIwUIPropertySet 
+{
+	name "<textField>"
+	parent <label_medium>
+//: extraclass "CIwUITextField"
+	sizeToContent false
+	oneLine true
+	background <textField_background>
+	cursorSize  { 3 17 }
+	cursor <textField_cursor>
+	focus <focus_textField>
+}
+
+CIwUIPropertySet 
+{
+    name "<picker>"
+//: extraclass "CComponentListboxIwUI"
+    sizeToContent true
+    oneLine true
+
+    background { drawableType border border { 20 10 } texture focus }
+
+    spacing 8
+    margin { 15 5 }
+
+    focus <focus>
+}
+
+CIwUIPropertySet
+{
+    name        <label_spinner>
+    textColour  { 0 0 0 255 }
+    font        "font_small"
+    sizeMin     {  0 32 }
+    sizeMax     { -1 32 }
+    margin      {  5 10 }
+    alignH      left
+    alignV      middle
+    oneLine     true
+}
+
+CIwUIPropertySet
+{
+    name    "<table_item>"
+//: extraclass "CComponentTableItemIwUI"
+    background
+    {
+        drawableType "image"
+        texture "focus"
+    }
+
+    itemDown
+    {
+        drawableType "image"
+        texture "focus"
+    }
+
+    itemSelected
+    {
+        drawableType "image"
+        texture "focus"
+    }
+
+    focus
+    {
+        drawableType "image"
+        texture "focus"
+    }
+}
+
+CIwUIPropertySet 
+{
+	name "<NavigationBar>"
+        font "font_small"
+        background <progressBar_background>
+}
+
+CIwUIPropertySet
+{
+    name "<NavigateButton>"
+//: extraclass "CIwUIButton"
+    textColour	{ 0 0 0 255 }
+    buttonUp <button_up>
+    buttonDown <button_down>
+    buttonDisabled <button_disabled>
+    focus <focus>
+    font "font_small"
+    sizeToContent true
+    margin  { 6 6 }
+    alignH              "centre"
+    alignV "middle"
+    oneLine true
+}
+
+CIwUIPropertySet
+{	
+    name "<NavigateLabel>"
+
+    textColour	{ 0 0 0 255 }
+    margin  { 6 4 }
+
+
+    oneLine true
+
+    font "font_small"
+    clipped true
+
+    alignH              "centre"
+    alignV "middle"
+
+    sizeToContent true
+
+//background <progressBar_background>
+}
+
+CIwUIPropertySet
+{
+    name        <toolbar>
+    texture "focus"
+}
+
+CIwUIPropertySet
+{
+    name        <toolbarbutton>
+    parent      <button>
+    margin 		{ 16 16 }
+}

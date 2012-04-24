@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Marmalade App Example</title>
+    <!-- The Web Marmalade library must be loaded before any scripts
+	 that call its methods. To be safe, load it in the page head -->
+    <script type="text/javascript" charset="utf-8" src="wm.js"></script>
+    <script type="text/javascript" charset="utf-8" src="clipboard.js"></script>
+</head>
+<body>
+  <div id="YourPageContainer">
+    <p style="color:red">
+      Hello Mobile!
+    </p>
+  </div>
+  <!-- Load your app script here. -->
+  <script type="text/javascript" charset="utf-8">
+      function onError() {
+      alert("error");
+      }
+      function onGetTextSuccess(text) {
+      alert("got text '" + text + "' from clipboard");
+      }
+      function onSetTextSuccess(text) {
+      alert("set text '" + text + "' on clipboard");
+      navigator.clipboard.getText(onGetTextSuccess,onError);
+      }
+      // The entry point for your app
+      function onDeviceReady() {
+      // Now safe to use the Web Marmalade API
+      alert("Sending 'Welcome to Web Marmalade' to the clipboard!");
+      navigator.clipboard.setText('Welcome to Web Marmalade',onSetTextSuccess,onError);
+      }
+  </script>
+  <!-- Set the event listener that signals initialisation
+       complete. Your app can now be run. -->
+  <script>document.addEventListener("deviceready", onDeviceReady, false);</script>
+</body>
+</html>
